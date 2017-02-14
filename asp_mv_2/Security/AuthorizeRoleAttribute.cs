@@ -17,7 +17,7 @@ namespace Asp_mvc_2.Security
             using (DEMODB2Entities db = new DEMODB2Entities())
             {
                 UserManager UM = new UserManager();
-                foreach (var roles in userAssignedRoles)
+                foreach (var roles in userAssignedRoles)     
                 {
                     authorize = UM.IsUserInRole(httpContext.User.Identity.Name, roles);
                     if (authorize)
